@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Memory Game Minnek" />
+    <title>Memory Game Minnek</title>
+    <link rel="icon" href="./images/lupa.png" type="image/x-png" />
+    <link rel="stylesheet" href="css/Game.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"
+      integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css"
+      integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Minnek Memory Game</h1>
+      <div class="dashboard">
+        <div class="dashboard-element">
+          <i class="dashboard-icon fas fa-stopwatch"></i>
+          <span id="timer"></span>
+        </div>
+        <div class="dashboard-element">
+          <i class="dashboard-icon fas fa-clone"></i> <span id="moves"></span>
+        </div>
+        <i id="reset" class="fas fa-redo-alt"></i>
+      </div>
+      <div id="stars">
+        <i class="fas fa-star" id="rating-poor"></i>
+        <i class="fas fa-star" id="rating-average"></i>
+        <i class="fas fa-star" id="rating-perfect"></i>
+      </div>
+      <div id="form">
+        <input type="radio" id="easyMode" name="difficulty" value="easy" />
+        <label for="easyMode">Easy</label>
+        <input
+          type="radio"
+          id="normalMode"
+          name="difficulty"
+          value="normal"
+          checked="checked"
+        />
+        <label class="checked" for="normalMode">Normal</label>
+        <input type="radio" id="hardMode" name="difficulty" value="hard" />
+        <label for="hardMode">Hard</label>
+      </div>
+      <div class="game-board"></div>
+    </div>
+    <div class="modal">
+      <div class="modal-inner">
+        <h3>Well done!</h3>
+        <p class="modal-text">
+          You solved it in <span id="final-time"></span> seconds with
+          <span id="final-moves"></span> moves
+        </p>
+        <p class="modal-text" id="final-rating"></p>
+        <p class="modal-text" id="replay">
+          <i class="fas fa-redo-alt"></i> Play again?
+        </p>
+      </div>
+    </div>
+    <script src="js/Game.js"></script>
+  </body>
+</html>
